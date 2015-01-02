@@ -1,8 +1,10 @@
-nw_anchored matlab function which aligns sequences using the needleman-wunsch algorithm with the
-option of passing in known matches between the two sequences.
+nw_align
+========
+
+nw_anchored matlab function which aligns sequences using the needleman-wunsch algorithm with the option of passing in known matches between the two sequences.
 
 You can call the function in matlab by:
-nw_anchored('seq1.fa','seq2.fa', [matches.txt])
+*nw_anchored('seq1.fa','seq2.fa', [matches.txt])*
 
 This will return an alignment score where matches = 1, mismatches = -3, and gaps = -2, 
 as well as the alignment of the two sequences.
