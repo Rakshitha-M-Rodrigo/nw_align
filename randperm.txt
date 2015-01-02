@@ -1,0 +1,16 @@
+
+4)
+scores = [];
+ for i=1:10000
+hlen = length(hum_H);
+flen = length(fly_H);
+perm1 = randperm(hlen);
+perm2 = randperm(flen);
+ seq1 = hum_H(perm1);
+ seq2 = fly_H(perm2);
+fastawrite('Tempx',seq1);
+fastawrite('Tempx2',seq2); 
+scores(i) = nw_anchored('Tempx','Tempx2')
+delete('Tempx');
+delete('Tempx2');
+end
